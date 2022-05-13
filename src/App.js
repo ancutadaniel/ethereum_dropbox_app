@@ -12,7 +12,7 @@ const App = () => {
   const [accounts, setAccounts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [contract, setContract] = useState({});
-  const [web3, setWeb3] = useState({});
+  const [, setWeb3] = useState({});
   const [files, setFiles] = useState([]);
 
   const [file, setFile] = useState({

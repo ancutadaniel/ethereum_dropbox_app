@@ -1,4 +1,4 @@
-import { Table, Icon, Button } from 'semantic-ui-react';
+import { Table } from 'semantic-ui-react';
 import { convertBytes } from '../utils/convertBytes';
 import moment from 'moment';
 
