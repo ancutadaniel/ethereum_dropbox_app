@@ -13,7 +13,7 @@ const Files = ({ files }) => {
     'Uploader/View',
     'Hash/View/Get',
   ];
-  const url = `https://ipfs.infura.io/ipfs/`;
+  const url = `https://dropbox.infura-ipfs.io/ipfs/`;
 
   return (
     <Table celled inverted selectable>

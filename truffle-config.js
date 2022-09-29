@@ -74,24 +74,26 @@ module.exports = {
     //   timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
     //   skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
     // },
-    rinkeby: {
+    // rinkeby: {
+    //   provider: () =>
+    //     new HDWalletProvider(
+    //       process.env.MNEMONIC,
+    //       `https://rinkeby.infura.io/v3/${process.env.PROJECT_ID}`
+    //     ),
+    //   network_id: 4, // Rinkeby's id
+    //   gas: 5500000, // Rinkeby has a lower block limit than mainnet
+    //   // confirmations: 2, // # of confs to wait between deployments. (default: 0)
+    //   // timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+    //   // skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
+    // },
+    goerli: {
       provider: () =>
         new HDWalletProvider(
           process.env.MNEMONIC,
-          `https://rinkeby.infura.io/v3/${process.env.PROJECT_ID}`
+          `https://eth-goerli.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`
         ),
-      network_id: 4, // Rinkeby's id
-      gas: 5500000, // Rinkeby has a lower block limit than mainnet
-      // confirmations: 2, // # of confs to wait between deployments. (default: 0)
-      // timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
-      // skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
+      network_id: 5,
     },
-    // Useful for private networks
-    // private: {
-    // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
-    // network_id: 2111,   // This network is yours, in the cloud.
-    // production: true    // Treats this network as if it was a public net. (default: false)
-    // }
   },
 
   // Set default mocha options here, use special reporters etc.

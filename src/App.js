@@ -26,11 +26,20 @@ const App = () => {
 
   const [errors, setErrors] = useState();
 
+  const INFURA_ID = process.env.REACT_APP_INFURA_ID;
+  const INFURA_SECRET_KEY = process.env.REACT_APP_INFURA_SECRET_KEY;
+  const auth =
+    'Basic ' +
+    Buffer.from(INFURA_ID + ':' + INFURA_SECRET_KEY).toString('base64');
+
   // connect to Infura IPFS API address
   const ipfs = create({
     host: 'ipfs.infura.io',
     port: '5001',
     protocol: 'https',
+    headers: {
+      authorization: auth,
+    },
   });
 
   const loadWeb3 = async () => {
